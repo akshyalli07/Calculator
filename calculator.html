@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Calculator.css">
+    <title>Calculator</title>
+    <style>
+        .sec1{
+            background-image: url("22940.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #d4a8a8;
+            background-size: cover;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+        }
+
+        .sec1 table, .sec1 td{
+            text-align: center;
+            padding: 10px;
+        }
+        .sec1 table{
+            width: 15%;
+            background-color: #ececec;
+            margin-top: 50px;
+            height: 40vh;
+            padding-top: 50px;
+            backdrop-filter: blur(4px);
+        }
+        #result, #history{
+            width: 100%;
+            text-align: right;
+            height: 4vh;
+            outline: none;
+            border: none;
+            color: black;
+            background: none;
+            padding-bottom: 10px;
+            border-bottom: 2px solid black;
+            margin-bottom: 0px;
+        }
+
+        #result{
+            font-size: 35px;
+        }
+        #history{
+            font-size: 25px;
+        }
+
+        .sec1 .number, .sec1 .operator, .sec1 .clear, .sec1 .decimal, .sec1 .empty{
+            width: 50px;
+            height:50px;
+            border-radius: 50%;
+            box-shadow: red;
+            outline: none;
+            border: none;
+            font-family: sans-serif;
+            font-size: 125%;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .sec1 .clear {
+            background-color:  #ff33ef;
+        }
+        .sec1 .del{
+            background-color:  #944dff;
+        }
+        .sec1 .mod {
+            background-color: #ffe680;
+        }
+        .sec1 .division{
+            background-color: #ffc34d;
+        }
+        .sec1 .multiplication{
+            background-color: #ffc34d;
+        }
+        .sec1 .subtraction{
+            background-color: #00ffbf;
+        }
+        .sec1 .addition{
+            background-color: #1a8cff;
+        }
+        .sec1 .equals{
+            background-color: #ff8c1a;
+        }
+
+        .sec1 .clear:hover, .sec1 .number:hover, .sec1 .del:hover, .sec1 .operator:hover{
+            background-color: rgba(10, 47, 128, 0.822);
+            color:whitesmoke;
+        }
+
+
+        .sec1 .operator:hover, .sec1 .decimal:hover, .sec1 .number:hover {
+            color: whitesmoke;
+            background-color: rgba(109, 30, 30, 0.822);
+            transition: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="sec1">
+        <center>
+            <table id="calcTable">
+                <tr>
+                    <td colspan="4"><input type="text" disabled name="History" id="history" placeholder=""></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><input type="text" disabled name="CalcArea" id="result" placeholder=""></td>
+                </tr>
+                <tr>
+                    <td><button class="operator clear" id="clear">AC</button></td>
+                    <td><button class="operator del" id="del">Del</button></td>
+                    <td><button class="operator mod" id="%">%</button></td>
+                    <td><button class="operator division" id="/">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="number" id="1">1</button></td>
+                    <td><button class="number" id="2">2</button></td>
+                    <td><button class="number" id="3">3</button></td>
+                    <td><button class="operator multiplication" id="*">*</button></td>
+                </tr>
+                <tr>
+                    <td><button class="number" id="4">4</button></td>
+                    <td><button class="number" id="5">5</button></td>
+                    <td><button class="number" id="6">6</button></td>
+                    <td><button class="operator subtraction" id="-">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="number" id="7">7</button></td>
+                    <td><button class="number" id="8">8</button></td>
+                    <td><button class="number" id="9">9</button></td>
+                    <td><button class="operator addition" id="+">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="empty" id="empty"></button></td>
+                    <td><button class="number" id="0"> 0</button></td>
+                    <td><button class="decimal" id=".">.</button></td>
+                    <td><button class="operator equals" id="=">=</button></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+            </table>
+        </center>
+    </div>
+</body>
+<script src="Calculator.js"></script>
+</html>
